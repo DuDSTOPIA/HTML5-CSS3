@@ -136,6 +136,7 @@ body {
 .lista__link {
     list-style-type: none;
     color: var(--branco-principal);
+    font-size: 13px;
 }
 
 .lista__link a{
@@ -147,6 +148,8 @@ body {
 .rodape__texto {
     width: 90%;
     margin: 1% 5%;
+    font-size: 0.5em;
+    padding-bottom: 50px;
 }
 
 .lista__link a:hover {
