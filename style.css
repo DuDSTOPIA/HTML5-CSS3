@@ -19,7 +19,7 @@ body {
     margin: 0;
     padding: 0;
 }
-
+/* Primeira sessao da pagina */
 .principal {
     background-image: url("img/Background.png");
     background-repeat: no-repeat;
@@ -28,12 +28,15 @@ body {
     text-align: center;
 }
 
+/* Esse funciona em todas as sessões */
 .container {
     height: 100vh;
     display: grid;
     grid-template-columns: 50% 50%;
 }
+/* /////////// */
 
+/* Primeira sessao da pagina */
 .container__botao {
     background-color: var(--botao-azul);
     border-radius: 5px;
@@ -58,6 +61,7 @@ body {
     font-size: 28px;
     font-weight: 700;
 }
+
 .container__imagens {
     margin: 1em 0 2em 0;
 }
@@ -66,6 +70,7 @@ body {
     margin: 0 6em;
 }
 
+/* Segunda sessao da pagina */
 .secundario__imagem {
     width: 80%;
 }
@@ -115,6 +120,8 @@ body {
     font-size: 32px;
     color: var(--branco-principal);
 }
+
+/* rodapé */
 
 .rodape {
     text-align: center;    
@@ -168,4 +175,123 @@ body {
 .container__botao:hover {
     background-color: #4d9af7;
     color: var(--cor-de-fundo);
+}
+
+
+
+
+@media(max-width: 768px) {
+
+    /* Todas as sessões */
+    .container {        
+        width:100vw;
+        height: 100%;
+        margin: 0 0 40vw 0;
+        padding: 0;
+        grid-template-columns: none;
+    }
+
+    /* Primeira sessao mobile */
+    .container__caixa {
+        text-align: center;
+        margin: 0;   
+    }
+
+    .container__titulo {
+        font-size: 16px;
+        margin:50vw 5vw 5vw 5vw;
+        justify-content: space-around;      
+    }
+
+    .container__imagens {
+        text-align: center;
+        max-width: 70vw;
+    }
+
+    .container__botao {
+        margin: 10vw;
+        justify-content: space-around;
+    }
+
+    .container__aviso {
+        margin: 10vw;
+        justify-content: space-around;
+    }
+
+    /* Segunda sessao mobile */
+    
+
+    .secundario__imagem {
+        max-width: 50%;
+        margin-left:auto;
+        margin-right: auto;
+    }
+
+    .descricao__titulo {
+        font-size: 28px;
+        text-align: center;
+        text-align:justify;
+        margin: 1em;
+    }
+
+    .descricao__texto {
+        font-size: 16px;
+    }
+
+    .container__descricao {
+        text-align: center;
+    }
+
+    /* Esse codigo muda a posição dos itens do container */
+    .terceira__sessao {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-terceira__sessao {
+        order: 3;
+    }
+
+    .imagem-terceira__sessao {
+        order: 2;
+    }
+    /* ////////////////// */
+
+
+
+    /* Quinta sessão Dispositivos */
+    .dispositivos__titulo {
+        font-size: 20px;
+    }
+
+    .dispositivos__lista {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .dispositivos__lista > li > img{
+        margin: 0 1.5em;
+        max-width: 20vw;
+    }
+
+    .lista__item {
+        font-size: 16px;
+    }
+
+
+    /* rodapé */
+    .rodape__lista {
+        margin: 0;
+        width: 100vw;
+    }
+    .lista__link {
+        justify-content: space-evenly;
+    }
+
+    .rodape__texto {
+        font-size: 10px;
+    }
+    
 }
